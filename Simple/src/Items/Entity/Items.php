@@ -11,63 +11,6 @@ class Items
     protected $delete = 0;
     protected $created;
 
-    protected $attributes = array(
-        'id' => array(
-            'hide' => true,
-            'key' => true,
-            'list' => false,
-            'create' => false,
-            'type' => 'hidden',
-        ),
-        'description' => array(
-            'width' => '40%',
-            'type' => 'textarea',
-            'required' => true,
-        ),
-        'Size' => array(
-            'width' => '40%',
-            'type' => 'select',
-            'required' => true,
-            'options' => array('s' => 'Small', 'm' => 'Medium', 'l' => 'Large', 'xl' => 'X-Large', 'xxl' => 'XX-Large'),
-        ),
-        'price' => array(
-            'width' => '20%',
-            'type' => 'int',
-            'required' => true,
-        ),
-        'qty' => array(
-            'width' => '20%',
-            'type' => 'int',
-            'required' => true,
-        ),
-        'created' => array(
-            'width' => '30%',
-            'create' => false,
-            'update' => false,
-        ),
-        'delete' => array(
-            'type' => 'radio',
-            'options' => array(0 => 'No', 1 => 'Yes'),
-            'create' => false,
-        )
-    );
-
-    /**
-     * @param array $attributes
-     */
-    public function setAttributes($attributes)
-    {
-        $this->attributes = $attributes;
-    }
-
-    /**
-     * @return array
-     */
-    public function getAttributes()
-    {
-        return $this->attributes;
-    }
-
     /**
      * @param mixed $created
      */
